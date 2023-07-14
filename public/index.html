@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recipe App</title>
+        <style>
+            #add-feedback {
+                color: red;
+            }
+
+            .recipe {
+                border: 1px solid black;
+                border-radius: 5px;
+                ;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>Recipe App</h1>
+        <div id="login">
+            <form id="login-form">
+
+                <h3>Sign in</h3>
+
+                <label for="login-email">Email: </label>
+                <input type="email" id="login-email">
+                <br />
+                <label for="login-password">Password: </label>
+                <input type="password" id="login-password">
+                <br />
+
+                <input type="submit" value="Sign in">
+                <br />
+
+                <div id="login-feedback"></div>
+                <br />
+                <br />
+                <br />
+            </form>
+            <button id="show-signup" onclick="showSignup()">Create a new account</button>
+        </div>
+        <div id="signup">
+            <form id="signup-form">
+                <h3>Sign up</h3>
+
+                <label for="signup-email">Email: </label>
+                <input type="email" id="signup-email">
+                <br />
+                <br />
+                <label for="signup-password">Password: </label>
+                <input type="password" id="signup-password"><br />
+                <label for="signup-confirm-password">Confirm Password: </label>
+                <input type="password" id="signup-confirm-password">
+                <br /><br />
+
+                <input type="submit" value="Sign up">
+                <br />
+
+                <div id="signup-feedback"></div>
+                <br />
+                <br />
+                <br />
+            </form>
+            <button id="show-login">Already have an account?</button>
+        </div>
+
+        <div id="recipes">
+            <div id="user-info">
+                Currently logged in as: <span class="user-email"></span><br /><br />
+                <button id="signout-btn">Sign out</button>
+            </div>
+            <div id="get-recipes">
+                <div id="get-contents"></div>
+                <div><button id="show-all-btn">Show all recipes</button></div>
+            </div>
+            <div id="add-recipe">
+                <h2>Add Recipe</h2>
+                <form id="add-recipe-form">
+                    <label for="add-title">Title</label>
+                    <input type="text" id="add-title"><br />
+
+                    <label for="add-description">Description</label>
+                    <input type="text" id="add-description"><br />
+
+                    <label for="add-steps">Steps</label>
+                    <input type="text" id="add-steps"><br /><br />
+
+                    <button type="submit">Add Recipe</button>
+                </form>
+                <div id="add-feedback"></div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script type="module" src="index.js"></script>
+    </body>
+</html>
