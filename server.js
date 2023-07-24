@@ -9,23 +9,16 @@ const { MongoClient } = require('mongodb');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
+
 const firebase = require('firebase/app');
 require('firebase/auth');
-
-// put your firebaseConfig as is into a file called firebaseConfig.js
-// const firebaseConfig = {
-//     apiKey: "",
-//     authDomain: "",
-//     projectId: "",
-//     storageBucket: "",
-//     messagingSenderId: "",
-//     appId: "",
-//     measurementId: ""
-// };
 
 firebaseConfig = require('./firebase-key-sample')
 
 firebase.initializeApp(firebaseConfig);
+
+
 
 // const firebase_app = require('firebase-admin/app');
 // const firebase = require('firebase-admin');
